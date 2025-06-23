@@ -16,13 +16,13 @@ import org.fossify.phone.models.CallContact
 
 fun getCallContact(context: Context, call: Call?, callback: (CallContact) -> Unit) {
     if (call.isConference()) {
-        callback(CallContact(context.getString(R.string.conference), "", "", ""))
+        callback(CallContact(context.getString(R.string.conference), "", "", "", ""))
         return
     }
 
     val privateCursor = context.getMyContactsCursor(favoritesOnly = false, withPhoneNumbersOnly = true)
     ensureBackgroundThread {
-        val callContact = CallContact("", "", "", "")
+        val callContact = CallContact("", "", "", "", "")
         val handle = try {
             call?.details?.handle?.toString()
         } catch (e: NullPointerException) {
@@ -62,6 +62,7 @@ fun getCallContact(context: Context, call: Call?, callback: (CallContact) -> Uni
                 if (contact != null) {
                     callContact.name = contact.getNameToDisplay()
                     callContact.photoUri = contact.photoUri
+                    callContact.company = contact.organization.company
 
                     if (contact.phoneNumbers.size > 1) {
                         val specificPhoneNumber = contact.phoneNumbers.firstOrNull { it.value == number }

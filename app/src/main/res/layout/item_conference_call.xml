@@ -18,21 +18,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <org.fossify.commons.views.MyTextView
-        android:id="@+id/item_conference_call_name"
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/medium_margin"
-        android:layout_toEndOf="@+id/item_conference_call_image"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:textSize="@dimen/bigger_text_size"
-        android:textDirection="firstStrongLtr"
-        app:layout_constraintBottom_toBottomOf="@+id/item_conference_call_image"
-        app:layout_constraintEnd_toStartOf="@+id/item_conference_call_split"
-        app:layout_constraintStart_toEndOf="@+id/item_conference_call_image"
-        app:layout_constraintTop_toTopOf="@+id/item_conference_call_image"
-        tools:text="John Doe" />
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/item_conference_call_image"
+        app:layout_constraintEnd_toStartOf="@id/item_conference_call_split"
+        app:layout_constraintHeight="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/item_conference_call_image"
+        app:layout_constraintTop_toTopOf="@id/item_conference_call_image">
+
+        <org.fossify.commons.views.MyTextView
+            android:id="@+id/item_conference_call_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textDirection="firstStrongLtr"
+            android:textSize="@dimen/bigger_text_size"
+            tools:text="John Doe" />
+
+        <org.fossify.commons.views.MyTextView
+            android:id="@+id/item_conference_call_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textDirection="firstStrongLtr"
+            android:textSize="@dimen/bigger_text_size"
+            tools:text="Company" />
+    </LinearLayout>
 
     <ImageButton
         android:id="@+id/item_conference_call_end"

@@ -11,17 +11,30 @@
         style="@style/TextAppearance.Compat.Notification.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textDirection="firstStrongLtr"
         android:textSize="@dimen/bigger_text_size"
         android:textStyle="bold"
+        tools:text="Caller Name" />
+
+    <TextView
+        android:id="@+id/notification_caller_company"
+        style="@style/TextAppearance.Compat.Notification.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notification_caller_name"
         android:textDirection="firstStrongLtr"
-        tools:text="Caller name" />
+        android:textSize="@dimen/normal_text_size"
+        android:textStyle="bold"
+        tools:text="Caller Company"
+        tools:visibility="gone" />
 
     <TextView
         android:id="@+id/notification_call_status"
         style="@style/TextAppearance.Compat.Notification.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/notification_caller_name"
+        android:layout_below="@id/notification_caller_company"
+        android:layout_marginTop="0dp"
         android:alpha="0.8"
         tools:text="123 456 789" />
 
@@ -37,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/notification_call_status"
-        android:layout_marginTop="@dimen/activity_margin"
+        android:layout_marginTop="@dimen/tiny_margin"
         android:orientation="horizontal">
 
         <ImageView

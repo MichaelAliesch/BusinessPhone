@@ -61,6 +61,8 @@ class CallNotificationManager(private val context: Context) {
                 callerName += " - ${callContact.numberLabel}"
             }
 
+            var companyName = callContact.company
+
             val contentTextId = when (callState) {
                 Call.STATE_RINGING -> R.string.is_calling
                 Call.STATE_DIALING -> R.string.dialing
@@ -80,6 +82,9 @@ class CallNotificationManager(private val context: Context) {
                 if (callContactAvatar != null) {
                     setImageViewBitmap(R.id.notification_thumbnail, callContactAvatarHelper.getCircularBitmap(callContactAvatar))
                 }
+
+                setText(R.id.notification_caller_company, companyName)
+                setVisibleIf(R.id.notification_caller_company, companyName != "")
             }
 
             val builder = NotificationCompat.Builder(context, channelId)

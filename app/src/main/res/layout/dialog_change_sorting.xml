@@ -52,6 +52,14 @@
                 android:text="@string/full_name" />
 
             <org.fossify.commons.views.MyCompatRadioButton
+                android:id="@+id/sorting_dialog_radio_company_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/medium_margin"
+                android:paddingBottom="@dimen/medium_margin"
+                android:text="@string/company_name" />
+
+            <org.fossify.commons.views.MyCompatRadioButton
                 android:id="@+id/sorting_dialog_radio_date_created"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

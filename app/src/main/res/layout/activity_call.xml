@@ -60,7 +60,6 @@
         android:id="@+id/caller_avatar"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/activity_margin"
         android:contentDescription="@null"
         app:layout_constraintBottom_toTopOf="@id/caller_name_label"
         app:layout_constraintDimensionRatio="1:1"
@@ -77,18 +76,35 @@
         android:id="@+id/caller_name_label"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/bigger_margin"
         android:gravity="center_horizontal"
         android:maxLines="1"
         android:paddingStart="@dimen/medium_margin"
         android:paddingEnd="@dimen/medium_margin"
+        android:textDirection="firstStrongLtr"
+        android:textSize="@dimen/caller_name_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/caller_company_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/caller_avatar"
+        tools:text="Caller name" />
+
+    <org.fossify.commons.views.MyTextView
+        android:id="@+id/caller_company_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:paddingStart="@dimen/medium_margin"
+        android:paddingEnd="@dimen/medium_margin"
+        android:textDirection="firstStrongLtr"
         android:textSize="@dimen/caller_name_text_size"
         app:layout_constraintBottom_toTopOf="@id/caller_number"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/caller_avatar"
-        android:textDirection="firstStrongLtr"
-        tools:text="Caller name" />
+        app:layout_constraintTop_toBottomOf="@+id/caller_name_label"
+        tools:text="Company Inc." />
 
     <org.fossify.commons.views.MyTextView
         android:id="@+id/caller_number"
