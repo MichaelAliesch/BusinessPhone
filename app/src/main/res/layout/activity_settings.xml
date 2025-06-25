@@ -196,7 +196,7 @@
                     style="@style/SettingsSwitchStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/settings_show_company_name" />
+                    android:text="@string/settings_hide_company_name" />
 
             </RelativeLayout>
 

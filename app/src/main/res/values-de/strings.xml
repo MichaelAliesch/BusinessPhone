@@ -79,7 +79,7 @@
     <string name="export_call_history">Anrufliste exportieren</string>
     <string name="import_call_history">Anrufliste importieren</string>
     <string name="company_name">Firma</string>
-    <string name="settings_show_company_name">Zeige Firmenname</string>
+    <string name="settings_hide_company_name">Verberge Firmennamen</string>
 
     <!-- FAQ -->
     <string name="faq_1_title">Ich höre eingehende Anrufe, aber der Bildschirm schaltet sich nicht ein. Was kann ich tun\?</string>
