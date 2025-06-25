@@ -30,6 +30,8 @@ Download the Fossify Phone App now and step into a mobile world where privacy se
 <div align="center">
 <img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png" width="30%">
 <img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/2_en-US.png" width="30%">
-<img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/Bildschirmfoto vom 2025-06-23 23-27-22.png" width="30%">
+<img alt="App image" src="graphics/Screenshot_Call History.png" width="30%">
+<img alt="App image" src="graphics/Screenshot_Call activity.png" width="30%"> 
+<img alt="App image" src="graphics/Screenshot_conference.png" width="30%">
 <img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/3_en-US.png" width="30%">
 </div>
