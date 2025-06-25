@@ -480,6 +480,19 @@ class RecentCallsAdapter(
                     setTextSize(TypedValue.COMPLEX_UNIT_PX, currentFontSize)
                 }
 
+                itemRecentsCompany.apply {
+                    if (matchingContact != null) {
+                        var company = matchingContact.organization.company
+                        text = company
+                        setTextColor(textColor)
+                        itemRecentsCompany.beVisibleIf(company != "")
+
+                    } else {
+                        itemRecentsCompany.beGone()
+                    }
+
+                }
+
                 itemRecentsDateTime.apply {
                     text = if (refreshItemsListener == null) {
                         call.startTS.formatDateOrTime(context, hideTimeOnOtherDays = false, showCurrentYear = false, hideTodaysDate = false)

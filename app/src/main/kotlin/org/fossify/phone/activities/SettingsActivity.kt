@@ -85,6 +85,7 @@ class SettingsActivity : SimpleActivity() {
         setupDialPadOpen()
         setupGroupSubsequentCalls()
         setupStartNameWithSurname()
+        setupHideCompany()
         setupFormatPhoneNumbers()
         setupDialpadVibrations()
         setupDialpadNumbers()
@@ -258,6 +259,16 @@ class SettingsActivity : SimpleActivity() {
             settingsStartNameWithSurnameHolder.setOnClickListener {
                 settingsStartNameWithSurname.toggle()
                 config.startNameWithSurname = settingsStartNameWithSurname.isChecked
+            }
+        }
+    }
+
+    private fun setupHideCompany() {
+        binding.apply {
+            settingsHideCompanyName.isChecked = config.HideCompany
+            settingsHideCompanyNameHolder.setOnClickListener {
+                settingsHideCompanyName.toggle()
+                config.HideCompany = settingsHideCompanyName.isChecked
             }
         }
     }

@@ -586,11 +586,7 @@ class CallActivity : SimpleActivity() {
             } else {
                 callerNumber.beGone()
             }
-            if (company.isEmpty()) {
-                callerCompanyLabel.text = company
-            } else {
-                callerCompanyLabel.beGone()
-            }
+            if (company.isNotEmpty()) callerCompanyLabel.text = company else callerCompanyLabel.beGone()
 
 
             callerAvatar.apply {

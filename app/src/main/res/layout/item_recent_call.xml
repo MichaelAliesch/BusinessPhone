@@ -27,10 +27,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@id/item_recents_location"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/overflow_menu_icon"
         app:layout_constraintStart_toEndOf="@id/item_recents_image"
-        app:layout_constraintTop_toTopOf="@id/item_recents_image">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/item_recents_name"

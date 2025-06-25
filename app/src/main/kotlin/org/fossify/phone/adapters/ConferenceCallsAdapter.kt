@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import org.fossify.commons.adapters.MyRecyclerViewAdapter
 import org.fossify.commons.extensions.applyColorFilter
+import org.fossify.commons.extensions.beGone
+import org.fossify.commons.extensions.beGoneIf
 import org.fossify.commons.extensions.toast
 import org.fossify.commons.helpers.LOWER_ALPHA
 import org.fossify.commons.helpers.SimpleContactsHelper
@@ -52,6 +54,15 @@ class ConferenceCallsAdapter(
                     root.post {
                         itemConferenceCallName.text = callContact.name.ifEmpty { itemView.context.getString(R.string.unknown_caller) }
                         itemConferenceCallName.setTextColor(textColor)
+
+                        if (false){ //TODO add settings hide company name function
+                            itemConferenceCallCompany.beGone()
+                        } else {
+                            itemConferenceCallCompany.beGoneIf(callContact.company =="")
+                            itemConferenceCallCompany.text = callContact.company
+                            itemConferenceCallCompany.setTextColor(textColor)
+                        }
+
                         val contactDrawable = activity.getDrawable(R.drawable.ic_person_vector)
                         contactDrawable?.applyColorFilter(textColor)
                         SimpleContactsHelper(activity).loadContactImage(

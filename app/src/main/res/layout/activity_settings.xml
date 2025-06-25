@@ -185,13 +185,14 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/settings_show_company_name_holder"
+                android:id="@+id/settings_hide_company_name_holder"
                 style="@style/SettingsHolderSwitchStyle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                tools:visibility="gone">
 
                 <org.fossify.commons.views.MyMaterialSwitch
-                    android:id="@+id/settings_show_company_name"
+                    android:id="@+id/settings_hide_company_name"
                     style="@style/SettingsSwitchStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
